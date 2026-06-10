@@ -142,11 +142,11 @@ export const SITE_DATA = {
     { href: "#contact", label: "Contact" },
   ],
   hero: {
-    eyebrow: "Tech, Music, and IT Ops",
+    eyebrow: "Tech, Consulting, and IT Ops",
     nameplate: "Louie Hegeler-Meile",
     intro: "I'm",
     roles: [
-      "senior IT Ops Specialist",
+      "implementation consultant",
       "sysadmin",
       "M365 + Azure admin",
       "hands-on troubleshooter",
@@ -157,9 +157,9 @@ export const SITE_DATA = {
       "bit of a cinephile...",
     ],
     subtitle:
-      "I make sure IT at 21-5 works the way it should. I handle device setup, " +
-      "Microsoft 365 and Azure admin, and jump on weird issues before they become " +
-      "big headaches.",
+      "I'm an implementation consultant at Enablen Consulting, helping organisations " +
+      "adopt and get the most out of their platforms. I bring a strong IT ops background " +
+      "and a habit of fixing root causes rather than symptoms.",
     actions: [
       {
         href: "https://www.linkedin.com/in/louiehegelermeile",
@@ -184,12 +184,12 @@ export const SITE_DATA = {
     stats: [
       "Danish + English",
       "Driving License (B)",
-      "IT Operations @ 21-5",
+      "Implementation Consultant @ Enablen",
       "PC Builder",
     ],
     wins: [
-      { value: "Day Job", label: "keeping internal IT smooth at 21-5" },
-      { value: "Background", label: "strong 2nd-line Apple troubleshooting" },
+      { value: "Day Job", label: "implementation consulting at Enablen Consulting" },
+      { value: "Background", label: "4+ yrs IT ops, M365, and 2nd-line Apple support" },
       { value: "Off Hours", label: "music, gaming, travel, and PC builds" },
     ],
   },
@@ -197,8 +197,9 @@ export const SITE_DATA = {
     title: "About",
     paragraphs: [
       "Hey, I'm Louie. I'm an IT professional with a habit of fixing what's broken and building what doesn't exist yet.",
-      "In my current role, I manage and extend internal platforms, automate repetitive workflows, and build tooling from scratch when off-the-shelf options don't cut it. I spot broken processes and fix them — whether that means a configuration change or writing something new.",
-      "Before that, I did 2nd-line technical support for Apple, handling escalations from clients and service providers worldwide. That gave me the client-facing composure and structured thinking that purely technical roles don't always develop.",
+      "I'm currently working as an Implementation Consultant at Enablen Consulting, helping organisations implement and get real value out of their platforms.",
+      "Before that, I spent four years in IT operations at 21-5, managing M365 and Azure, building internal tooling, and automating workflows that had no good solution off the shelf. I spot broken processes and fix them — whether that means a config change or writing something new.",
+      "I also spent a year doing 2nd-line Apple support, handling escalations from clients and service providers worldwide. That gave me the client-facing composure and structured thinking that purely technical roles don't always develop.",
       "Outside work, I build PCs, write code for fun, and used to volunteer in r/techsupport — helping strangers debug real problems remotely.",
     ],
   },
@@ -206,11 +207,18 @@ export const SITE_DATA = {
     title: "Experience",
     items: [
       {
+        logo: { type: "image", src: "/logos/enablen.jpg", alt: "Enablen Consulting logo" },
+        title: "Implementation Consultant",
+        meta: "Enablen Consulting · Full-time | May 2026 - Present | Denmark",
+        description:
+          "Implementation consultant helping organisations adopt and get real value from their platforms.",
+      },
+      {
         logo: { type: "image", src: "/logos/21-5.jpg", alt: "21-5 logo" },
         title: "Senior IT Operations Specialist",
-        meta: "21-5 | Apr 2025 - Present | Hørsholm, Denmark",
+        meta: "21-5 | Apr 2025 - May 2026 | Hørsholm, Denmark",
         description:
-          "Oversee day-to-day IT operations, IT logistics, platform reliability, endpoint lifecycle management, and equipment procurement. I spot weak or outdated workflows and drive continuous improvement with better, more practical solutions.",
+          "Oversaw day-to-day IT operations, IT logistics, platform reliability, endpoint lifecycle management, and equipment procurement. Spotted weak or outdated workflows and drove continuous improvement with better, more practical solutions.",
       },
       {
         logo: { type: "image", src: "/logos/21-5.jpg", alt: "21-5 logo" },
@@ -256,7 +264,7 @@ export const SITE_DATA = {
     cta_href: "/projects",
     projects: [
       {
-        title: "Knowledge Base (215kbase / itkbase)",
+        title: "Knowledge Base",
         description:
           "Markdown-first internal knowledge base with a web editor, section/category browsing, and image upload. Deployed in two variants.",
       },
@@ -321,7 +329,7 @@ export const SITE_DATA = {
       {
         title: "What I Do",
         description:
-          "I keep internal IT stable and usable so people can do their work without fighting their tools.",
+          "I help organisations implement platforms and get real value out of them — and bring a strong IT ops background to every engagement.",
       },
       {
         title: "How I Work",
