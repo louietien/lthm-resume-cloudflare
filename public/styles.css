@@ -732,7 +732,13 @@ h3 { margin: 0; font-size: 0.96rem; font-weight: 600; }
     justify-content: flex-start;
   }
   .quick-nav::-webkit-scrollbar { display: none; }
-  .top-right-controls { top: 0.75rem; right: 0.75rem; }
+  .top-right-controls {
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    width: min(780px, 92vw);
+    margin: 0.75rem auto 0.6rem;
+  }
   .session-dock { min-width: 0; }
   .session-link, .session-button { padding-inline: 0.65rem; }
 }
