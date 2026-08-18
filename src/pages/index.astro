@@ -93,7 +93,12 @@ const contactPhone = site.hero.contact_popup.phone;
         ))}
       </div>
       <div class="section-cta">
-        <a class="btn btn-ghost" href={site.projects_section.cta_href}>{site.projects_section.cta_label} &rarr;</a>
+        <a class="btn btn-ghost btn-arrow" href={site.projects_section.cta_href}>
+          {site.projects_section.cta_label}
+          <svg class="arrow-icon" width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
       </div>
     </section>
 
@@ -116,9 +121,9 @@ const contactPhone = site.hero.contact_popup.phone;
 
     <section class="section" id="snapshot">
       <h2 class="section-label">{site.snapshot.title}</h2>
-      <div class="projects">
+      <div class="snapshot-grid">
         {site.snapshot.items.map(item => (
-          <div class="project">
+          <div class="snapshot-item">
             <h3>{item.title}</h3>
             <p>{item.description}</p>
           </div>
