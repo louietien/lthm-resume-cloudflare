@@ -235,6 +235,7 @@ export const SITE_DATA = {
         title: "Senior IT Operations Specialist",
         meta: {
           company: "21-5 A/S",
+          employment: "Full-time",
           period: "Apr 2025 - Apr 2026",
           location: "Hørsholm, Denmark",
         },
@@ -246,6 +247,7 @@ export const SITE_DATA = {
         title: "IT Operations Specialist",
         meta: {
           company: "21-5 A/S",
+          employment: "Full-time",
           period: "Sep 2021 - Apr 2025",
           location: "Hørsholm, Denmark",
         },
@@ -257,6 +259,7 @@ export const SITE_DATA = {
         title: "Senior Technical Advisor",
         meta: {
           company: "Webhelp Nordic",
+          employment: "Full-time",
           period: "Aug 2020 - Aug 2021",
           location: "Copenhagen, Denmark",
         },
@@ -268,6 +271,7 @@ export const SITE_DATA = {
         title: "Technical Advisor",
         meta: {
           company: "Webhelp Nordic",
+          employment: "Full-time",
           period: "Jan 2020 - Jul 2020",
           location: "Copenhagen, Denmark",
         },
@@ -279,6 +283,7 @@ export const SITE_DATA = {
         title: "HR Business Partner",
         meta: {
           company: "Vinstue 90",
+          employment: "Part-time",
           period: "Aug 2015 - Present",
           location: "Frederiksberg, Denmark",
         },
@@ -290,6 +295,7 @@ export const SITE_DATA = {
         title: "Storage & Sales Helper",
         meta: {
           company: "HARTUNG Men's Wear",
+          employment: "Part-time",
           period: "Sep 2014 - Aug 2018",
           location: "Copenhagen, Denmark",
         },
