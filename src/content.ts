@@ -221,49 +221,78 @@ export const SITE_DATA = {
       {
         logo: { type: "image", src: "/logos/enablen.jpg", alt: "Enablen Consulting logo" },
         title: "Customer Success Manager / Implementation Consultant",
-        meta: "Enablen Consulting · Full-time | May 2026 - Present | Copenhagen, Denmark",
+        meta: {
+          company: "Enablen Consulting",
+          employment: "Full-time",
+          period: "May 2026 - Present",
+          location: "Copenhagen, Denmark",
+        },
         description:
           "Advise clients on IT systems, tools, and processes. Design and implement workflow automations, deploy AI-powered solutions, and lead project and change management initiatives — including client onboarding, implementation workshops, and user adoption, plus workflow automation across Make and monday.com (certified) and PowerShell automation.",
       },
       {
         logo: { type: "image", src: "/logos/21-5.jpg", alt: "21-5 logo" },
         title: "Senior IT Operations Specialist",
-        meta: "21-5 A/S | Apr 2025 - Apr 2026 | Hørsholm, Denmark",
+        meta: {
+          company: "21-5 A/S",
+          period: "Apr 2025 - Apr 2026",
+          location: "Hørsholm, Denmark",
+        },
         description:
           "Oversaw day-to-day IT operations, IT logistics, platform reliability, endpoint lifecycle management, and equipment procurement. Spotted weak or outdated workflows and drove continuous improvement with better, more practical solutions.",
       },
       {
         logo: { type: "image", src: "/logos/21-5.jpg", alt: "21-5 logo" },
         title: "IT Operations Specialist",
-        meta: "21-5 A/S | Sep 2021 - Apr 2025 | Hørsholm, Denmark",
+        meta: {
+          company: "21-5 A/S",
+          period: "Sep 2021 - Apr 2025",
+          location: "Hørsholm, Denmark",
+        },
         description:
           "Managed Microsoft Exchange and Microsoft 365 administration, Azure DevOps workflows, and operational service delivery across modern workplace tooling.",
       },
       {
         logo: { type: "image", src: "/logos/webhelp.jpg", alt: "Webhelp Nordic logo" },
         title: "Senior Technical Advisor",
-        meta: "Webhelp Nordic | Aug 2020 - Aug 2021 | Copenhagen, Denmark",
+        meta: {
+          company: "Webhelp Nordic",
+          period: "Aug 2020 - Aug 2021",
+          location: "Copenhagen, Denmark",
+        },
         description:
           "Led second-line technical incident handling for Apple platforms, managed high-priority escalations, and coordinated complex repair workflows with authorised service providers worldwide.",
       },
       {
         logo: { type: "image", src: "/logos/webhelp.jpg", alt: "Webhelp Nordic logo" },
         title: "Technical Advisor",
-        meta: "Webhelp Nordic | Jan 2020 - Jul 2020 | Copenhagen, Denmark",
+        meta: {
+          company: "Webhelp Nordic",
+          period: "Jan 2020 - Jul 2020",
+          location: "Copenhagen, Denmark",
+        },
         description:
           "Provided technical troubleshooting across iOS and macOS platforms, building a strong foundation in diagnostics and structured escalation handling.",
       },
       {
         logo: { type: "image", src: "/logos/vinstue-90.jpg", alt: "Vinstue 90 logo" },
         title: "HR Business Partner",
-        meta: "Vinstue 90 | Aug 2015 - Present | Frederiksberg, Denmark",
+        meta: {
+          company: "Vinstue 90",
+          period: "Aug 2015 - Present",
+          location: "Frederiksberg, Denmark",
+        },
         description:
           "Manage payroll and tax reporting, coordinate shift schedules, and support onboarding and training of new staff.",
       },
       {
         logo: { type: "badge", text: "H" },
         title: "Storage & Sales Helper",
-        meta: "HARTUNG Men's Wear | Sep 2014 - Aug 2018 | Copenhagen, Denmark",
+        meta: {
+          company: "HARTUNG Men's Wear",
+          period: "Sep 2014 - Aug 2018",
+          location: "Copenhagen, Denmark",
+        },
         description:
           "Handled warehouse logistics, in-store sales support, and customer service.",
       },
