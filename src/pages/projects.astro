@@ -139,6 +139,18 @@ const data = PROJECTS_DATA;
       flex: 1;
     }
 
+    .card-links {
+      display: flex;
+      gap: 0.7rem;
+    }
+
+    .card-link {
+      font-size: 0.78rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .card-link:hover { text-decoration: underline; }
+
     .card-footer {
       display: flex;
       align-items: center;
@@ -227,6 +239,12 @@ const data = PROJECTS_DATA;
             {item.version && <span class="card-version">v{item.version}</span>}
           </div>
           <p class="card-desc">{item.description}</p>
+          {(item.demo || item.repo) && (
+            <div class="card-links">
+              {item.demo && <a class="card-link" href={item.demo} target="_blank" rel="noreferrer">Live demo ↗</a>}
+              {item.repo && <a class="card-link" href={item.repo} target="_blank" rel="noreferrer">Source ↗</a>}
+            </div>
+          )}
           <div class="card-footer">
             <div class="card-stack">
               {item.stack.map(tag => <span class="stack-tag">{tag}</span>)}

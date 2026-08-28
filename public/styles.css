@@ -511,6 +511,12 @@ h3 { margin: 0; font-size: 0.96rem; font-weight: 600; }
 .project p { margin: 0.3rem 0 0; color: var(--muted); font-size: 0.84rem; }
 .project:hover { border-color: var(--a-line); }
 
+.project-link {
+  color: var(--accent);
+  text-decoration: none;
+}
+.project-link:hover { text-decoration: underline; }
+
 /* ——— SNAPSHOT LIST ——————————————————————————————— */
 
 .snapshot-grid {

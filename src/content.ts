@@ -84,6 +84,15 @@ export const PROJECTS_DATA = {
       version: null,
     },
     {
+      name: "intranet-demo",
+      category: "React",
+      description: "Public, non-branded demo fork of a real internal company intranet — news feed, knowledge base, people directory, notes, and calendar, all backed by a client-side mock data layer with zero real backend.",
+      stack: ["Next.js", "TypeScript", "Cloudflare Workers"],
+      version: "0.1.0",
+      demo: "https://intra-demo.lthm.dk",
+      repo: "https://github.com/louietien/intranet-demo",
+    },
+    {
       name: "lthm-resume",
       category: "Python",
       description: "This site — personal portfolio with a private stats dashboard built with Flask, Plotly, and HTMX.",
@@ -266,6 +275,12 @@ export const SITE_DATA = {
     cta_label: "View all projects",
     cta_href: "/projects",
     projects: [
+      {
+        title: "intranet-demo",
+        description:
+          "Public, non-branded demo of a real internal company intranet — news feed, knowledge base, people directory, notes, and calendar, running entirely on mock data with no real backend.",
+        href: "https://intra-demo.lthm.dk",
+      },
       {
         title: "Knowledge Base",
         description:

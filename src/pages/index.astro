@@ -87,7 +87,13 @@ const contactPhone = site.hero.contact_popup.phone;
       <div class="projects">
         {site.projects_section.projects.map(item => (
           <div class="project">
-            <h3>{item.title}</h3>
+            <h3>
+              {item.href ? (
+                <a class="project-link" href={item.href} target="_blank" rel="noreferrer">{item.title} ↗</a>
+              ) : (
+                item.title
+              )}
+            </h3>
             <p>{item.description}</p>
           </div>
         ))}
