@@ -142,13 +142,15 @@ export const SITE_DATA = {
     { href: "#contact", label: "Contact" },
   ],
   hero: {
-    eyebrow: "Tech, Consulting, and IT Ops",
+    eyebrow: "Tech, Consulting, and AI",
     nameplate: "Louie Hegeler-Meile",
     intro: "I'm",
     roles: [
+      "customer success manager",
       "implementation consultant",
       "sysadmin",
       "M365 + Azure admin",
+      "AI agent builder",
       "hands-on troubleshooter",
       "PC builder",
       "music nerd",
@@ -157,9 +159,9 @@ export const SITE_DATA = {
       "bit of a cinephile...",
     ],
     subtitle:
-      "I'm an implementation consultant at Enablen Consulting, helping organisations " +
-      "adopt and get the most out of their platforms. I bring a strong IT ops background " +
-      "and a habit of fixing root causes rather than symptoms.",
+      "I'm a Customer Success Manager / Implementation Consultant at Enablen Consulting, advising " +
+      "clients on systems and processes, building workflow automations, and deploying AI-powered " +
+      "solutions. I bring a strong IT ops background and a habit of fixing root causes rather than symptoms.",
     actions: [
       {
         href: "https://www.linkedin.com/in/louiehegelermeile",
@@ -184,23 +186,23 @@ export const SITE_DATA = {
     stats: [
       "Danish + English",
       "Driving License (B)",
-      "Implementation Consultant @ Enablen",
+      "Customer Success Manager @ Enablen",
       "PC Builder",
     ],
     wins: [
-      { value: "Day Job", label: "implementation consulting at Enablen Consulting" },
-      { value: "Background", label: "4+ yrs IT ops, M365, and 2nd-line Apple support" },
+      { value: "Day Job", label: "Customer Success Manager / Implementation Consultant at Enablen Consulting" },
+      { value: "Background", label: "6+ yrs IT ops, systems admin, and implementation consulting" },
       { value: "Off Hours", label: "music, gaming, travel, and PC builds" },
     ],
   },
   about: {
     title: "About",
     paragraphs: [
-      "Hey, I'm Louie. I'm an IT professional with a habit of fixing what's broken and building what doesn't exist yet.",
-      "I'm currently working as an Implementation Consultant at Enablen Consulting, helping organisations implement and get real value out of their platforms.",
-      "Before that, I spent four years in IT operations at 21-5, managing M365 and Azure, building internal tooling, and automating workflows that had no good solution off the shelf. I spot broken processes and fix them — whether that means a config change or writing something new.",
-      "I also spent a year doing 2nd-line Apple support, handling escalations from clients and service providers worldwide. That gave me the client-facing composure and structured thinking that purely technical roles don't always develop.",
-      "Outside work, I build PCs, write code for fun, and used to volunteer in r/techsupport — helping strangers debug real problems remotely.",
+      "Hey, I'm Louie. I'm an energetic, outgoing IT professional who enjoys new challenges and working with good people — with a habit of fixing what's broken and building what doesn't exist yet.",
+      "I'm currently a Customer Success Manager / Implementation Consultant at Enablen Consulting, advising clients on systems and processes, building workflow automations, and running projects end-to-end.",
+      "Before that, I spent five years at 21-5 A/S, latterly as Senior IT Operations Specialist, managing M365 and Azure, building internal tooling, and automating workflows that had no good solution off the shelf. I care about root causes, not just quick fixes, and I like identifying clunky processes and making them better.",
+      "I also spent a year and a half doing 2nd-line Apple support, handling escalations from clients and service providers worldwide. That gave me the client-facing composure and structured thinking that purely technical roles don't always develop.",
+      "I also work hands-on with AI: building agents, prototyping internal tools with AI-assisted development, and getting practical results out of models rather than just talking about them. Outside work, I build PCs, write code for fun, and used to volunteer in r/techsupport — helping strangers debug real problems remotely.",
     ],
   },
   experience: {
@@ -208,52 +210,52 @@ export const SITE_DATA = {
     items: [
       {
         logo: { type: "image", src: "/logos/enablen.jpg", alt: "Enablen Consulting logo" },
-        title: "Implementation Consultant",
-        meta: "Enablen Consulting · Full-time | May 2026 - Present | Denmark",
+        title: "Customer Success Manager / Implementation Consultant",
+        meta: "Enablen Consulting · Full-time | May 2026 - Present | Copenhagen, Denmark",
         description:
-          "Implementation consultant helping organisations adopt and get real value from their platforms.",
+          "Advise clients on IT systems, tools, and processes. Design and implement workflow automations, deploy AI-powered solutions, and lead project and change management initiatives — including client onboarding, implementation workshops, and user adoption, plus workflow automation across Make and monday.com (certified) and PowerShell automation.",
       },
       {
         logo: { type: "image", src: "/logos/21-5.jpg", alt: "21-5 logo" },
         title: "Senior IT Operations Specialist",
-        meta: "21-5 | Apr 2025 - May 2026 | Hørsholm, Denmark",
+        meta: "21-5 A/S | Apr 2025 - Apr 2026 | Hørsholm, Denmark",
         description:
           "Oversaw day-to-day IT operations, IT logistics, platform reliability, endpoint lifecycle management, and equipment procurement. Spotted weak or outdated workflows and drove continuous improvement with better, more practical solutions.",
       },
       {
         logo: { type: "image", src: "/logos/21-5.jpg", alt: "21-5 logo" },
         title: "IT Operations Specialist",
-        meta: "21-5 | Sep 2021 - Apr 2025",
+        meta: "21-5 A/S | Sep 2021 - Apr 2025 | Hørsholm, Denmark",
         description:
           "Managed Microsoft Exchange and Microsoft 365 administration, Azure DevOps workflows, and operational service delivery across modern workplace tooling.",
       },
       {
-        logo: { type: "image", src: "/logos/webhelp.jpg", alt: "Webhelp logo" },
+        logo: { type: "image", src: "/logos/webhelp.jpg", alt: "Webhelp Nordic logo" },
         title: "Senior Technical Advisor",
-        meta: "Webhelp | Aug 2020 - Aug 2021 | Copenhagen",
+        meta: "Webhelp Nordic | Aug 2020 - Aug 2021 | Copenhagen, Denmark",
         description:
-          "Led second-line technical incident handling, managed high-priority escalations, and coordinated complex repair workflows with authorized service providers worldwide.",
+          "Led second-line technical incident handling for Apple platforms, managed high-priority escalations, and coordinated complex repair workflows with authorised service providers worldwide.",
       },
       {
-        logo: { type: "image", src: "/logos/webhelp.jpg", alt: "Webhelp logo" },
+        logo: { type: "image", src: "/logos/webhelp.jpg", alt: "Webhelp Nordic logo" },
         title: "Technical Advisor",
-        meta: "Webhelp | Jan 2020 - Jul 2020",
+        meta: "Webhelp Nordic | Jan 2020 - Jul 2020 | Copenhagen, Denmark",
         description:
-          "Provided technical troubleshooting across Apple platforms, building a strong foundation in diagnostics and structured escalation.",
+          "Provided technical troubleshooting across iOS and macOS platforms, building a strong foundation in diagnostics and structured escalation handling.",
       },
       {
         logo: { type: "image", src: "/logos/vinstue-90.jpg", alt: "Vinstue 90 logo" },
         title: "HR Business Partner",
-        meta: "Vinstue 90 | Aug 2015 - Present (multiple roles)",
+        meta: "Vinstue 90 | Aug 2015 - Present | Frederiksberg, Denmark",
         description:
-          "Managed payroll and tax reporting, coordinated shifts, and supported onboarding and training.",
+          "Manage payroll and tax reporting, coordinate shift schedules, and support onboarding and training of new staff.",
       },
       {
         logo: { type: "badge", text: "H" },
-        title: "Storage Helper",
-        meta: "HARTUNG Men's Wear | Sep 2014 - Aug 2018",
+        title: "Storage & Sales Helper",
+        meta: "HARTUNG Men's Wear | Sep 2014 - Aug 2018 | Copenhagen, Denmark",
         description:
-          "Handled stock logistics, customer service, and in-store sales support.",
+          "Handled warehouse logistics, in-store sales support, and customer service.",
       },
     ],
   },
@@ -289,25 +291,25 @@ export const SITE_DATA = {
     title: "Skills",
     items: [
       "IT Operations",
+      "AI Agent Design",
+      "AI Prompt Engineering",
+      "AI-Assisted Development",
+      "Make.com (certified)",
+      "monday.com (certified)",
+      "Workflow Automation",
       "Systems Administration",
       "Microsoft 365 Administration",
       "Microsoft Exchange",
+      "Microsoft Intune",
+      "HW & SW Troubleshooting",
+      "PowerShell Automation / Scripting",
+      "Endpoint Lifecycle Management",
+      "Apple iOS / macOS",
       "Azure Administration",
-      "Azure DevOps",
-      "Troubleshooting (Hardware + Software)",
-      "Automation & Scripting",
-      "iOS",
-      "macOS",
-      "tvOS",
-      "watchOS",
-      "Microsoft Office",
-      "Adobe Suite",
-      "PC Building",
       "Danish (Native)",
-      "English (Fluent)",
+      "English (Bilingual)",
       "Driving License (B)",
-      "Payroll & Tax Reporting",
-      "Recruiting & Coaching",
+      "PC Building",
     ],
     education_title: "Education",
     education: [
@@ -329,7 +331,7 @@ export const SITE_DATA = {
       {
         title: "What I Do",
         description:
-          "I help organisations implement platforms and get real value out of them — and bring a strong IT ops background to every engagement.",
+          "I advise clients on IT systems and processes, build workflow automations, and deploy AI-powered solutions — bringing a strong IT ops background to every engagement.",
       },
       {
         title: "How I Work",
@@ -353,7 +355,7 @@ export const SITE_DATA = {
       "If you need someone practical who can keep IT running and is easy to work with, feel free to reach out.",
     actions: [
       {
-        href: "mailto:mail@louietien.com",
+        href: "mailto:lt@lthm.dk",
         label: "Email Me",
         ghost: false,
         external: false,
