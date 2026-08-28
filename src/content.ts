@@ -200,9 +200,10 @@ export const SITE_DATA = {
     paragraphs: [
       "Hey, I'm Louie. I'm an energetic, outgoing IT professional who enjoys new challenges and working with good people — with a habit of fixing what's broken and building what doesn't exist yet.",
       "I'm currently a Customer Success Manager / Implementation Consultant at Enablen Consulting, advising clients on systems and processes, building workflow automations, and running projects end-to-end.",
-      "Before that, I spent five years at 21-5 A/S, latterly as Senior IT Operations Specialist, managing M365 and Azure, building internal tooling, and automating workflows that had no good solution off the shelf. I care about root causes, not just quick fixes, and I like identifying clunky processes and making them better.",
+      "Before that, I spent five years at 21-5 A/S, latterly as Senior IT Operations Specialist, managing M365 and Azure and building internal tooling and automations that had no off-the-shelf solution. I care about root causes, not just quick fixes, and I like making clunky processes better.",
       "I also spent a year and a half doing 2nd-line Apple support, handling escalations from clients and service providers worldwide. That gave me the client-facing composure and structured thinking that purely technical roles don't always develop.",
-      "I also work hands-on with AI: building agents, prototyping internal tools with AI-assisted development, and getting practical results out of models rather than just talking about them. Outside work, I build PCs, write code for fun, and used to volunteer in r/techsupport — helping strangers debug real problems remotely.",
+      "I work hands-on with AI too: building agents, prototyping internal tools with AI-assisted development, and getting practical results out of models rather than just talking about them.",
+      "Outside work, I build PCs, write code for fun, and used to volunteer in r/techsupport — helping strangers debug real problems remotely.",
     ],
   },
   experience: {
