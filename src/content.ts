@@ -168,8 +168,8 @@ export const SITE_DATA = {
       "bit of a cinephile...",
     ],
     subtitle:
-      "I'm a Customer Success Manager / Implementation Consultant at Enablen Consulting, advising " +
-      "clients on systems and processes, building workflow automations, and deploying AI-powered " +
+      "I'm a Customer Success Manager / Implementation Consultant — most recently at Enablen Consulting — " +
+      "advising clients on systems and processes, building workflow automations, and deploying AI-powered " +
       "solutions. I bring a strong IT ops background and a habit of fixing root causes rather than symptoms.",
     actions: [
       {
@@ -195,11 +195,11 @@ export const SITE_DATA = {
     stats: [
       "Danish + English",
       "Driving License (B)",
-      "Customer Success Manager @ Enablen",
+      "Customer Success Manager",
       "PC Builder",
     ],
     wins: [
-      { value: "Day Job", label: "Customer Success Manager / Implementation Consultant at Enablen Consulting" },
+      { value: "Latest Role", label: "Customer Success Manager / Implementation Consultant at Enablen Consulting (May – Sep 2026)" },
       { value: "Background", label: "6+ yrs IT ops, systems admin, and implementation consulting" },
       { value: "Off Hours", label: "music, gaming, travel, and PC builds" },
     ],
@@ -208,7 +208,7 @@ export const SITE_DATA = {
     title: "About",
     paragraphs: [
       "Hey, I'm Louie. I'm an energetic, outgoing IT professional who enjoys new challenges and working with good people — with a habit of fixing what's broken and building what doesn't exist yet.",
-      "I'm currently a Customer Success Manager / Implementation Consultant at Enablen Consulting, advising clients on systems and processes, building workflow automations, and running projects end-to-end.",
+      "Most recently I was a Customer Success Manager / Implementation Consultant at Enablen Consulting, advising clients on systems and processes, building workflow automations, and running implementations from kickoff to handover.",
       "Before that, I spent five years at 21-5 A/S, latterly as Senior IT Operations Specialist, managing M365 and Azure and building internal tooling and automations that had no off-the-shelf solution. I care about root causes, not just quick fixes, and I like making clunky processes better.",
       "I also spent a year and a half doing 2nd-line Apple support, handling escalations from clients and service providers worldwide. That gave me the client-facing composure and structured thinking that purely technical roles don't always develop.",
       "I work hands-on with AI too: building agents, prototyping internal tools with AI-assisted development, and getting practical results out of models rather than just talking about them.",
@@ -224,11 +224,11 @@ export const SITE_DATA = {
         meta: {
           company: "Enablen Consulting",
           employment: "Full-time",
-          period: "May 2026 - Present",
+          period: "May 2026 - Sep 2026",
           location: "Copenhagen, Denmark",
         },
         description:
-          "Advise clients on IT systems, tools, and processes. Design and implement workflow automations, deploy AI-powered solutions, and lead project and change management initiatives — including client onboarding, implementation workshops, and user adoption, plus workflow automation across Make and monday.com (certified) and PowerShell automation.",
+          "Advised clients on IT systems, tools, and processes. Designed and implemented workflow automations, rolled out AI-powered solutions and built internal AI competence, and led project and change management initiatives — including client onboarding, implementation workshops, and user adoption, plus workflow automation across Make and monday.com (certified) and PowerShell automation.",
       },
       {
         logo: { type: "image", src: "/logos/21-5.jpg", alt: "21-5 logo" },
@@ -240,7 +240,7 @@ export const SITE_DATA = {
           location: "Hørsholm, Denmark",
         },
         description:
-          "Oversaw day-to-day IT operations, IT logistics, platform reliability, endpoint lifecycle management, and equipment procurement. Spotted weak or outdated workflows and drove continuous improvement with better, more practical solutions.",
+          "Oversaw day-to-day IT operations, IT logistics, platform reliability, endpoint lifecycle management, and equipment procurement. Administered Microsoft 365 and Azure (Exchange, Entra ID, Intune, DevOps, SharePoint), coordinated vendors, and automated processes with PowerShell. Spotted weak or outdated workflows and drove continuous improvement with better, more practical solutions.",
       },
       {
         logo: { type: "image", src: "/logos/21-5.jpg", alt: "21-5 logo" },
@@ -341,6 +341,9 @@ export const SITE_DATA = {
   skills: {
     title: "Skills",
     items: [
+      "Customer Success",
+      "Customer Onboarding & User Adoption",
+      "Customer Service",
       "IT Operations",
       "AI Agent Design",
       "AI Prompt Engineering",
@@ -352,11 +355,17 @@ export const SITE_DATA = {
       "Microsoft 365 Administration",
       "Microsoft Exchange",
       "Microsoft Intune",
+      "Device Management (MDM)",
       "HW & SW Troubleshooting",
       "PowerShell Automation / Scripting",
       "Endpoint Lifecycle Management",
-      "Apple iOS / macOS",
-      "Azure Administration",
+      "Windows / macOS / iOS / Linux",
+      "Azure Administration (Entra ID, DevOps)",
+      "Docker",
+      "Node.js / Next.js / TypeScript",
+      "SQLite / PostgreSQL",
+      "Self-hosting",
+      "Microsoft Office",
       "Danish (Native)",
       "English (Bilingual)",
       "Driving License (B)",
