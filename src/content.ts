@@ -155,6 +155,7 @@ export const SITE_DATA = {
     nameplate: "Louie Hegeler-Meile",
     intro: "I'm",
     roles: [
+      "technical support engineer",
       "customer success manager",
       "implementation consultant",
       "sysadmin",
@@ -168,9 +169,9 @@ export const SITE_DATA = {
       "bit of a cinephile...",
     ],
     subtitle:
-      "I'm a Customer Success Manager / Implementation Consultant at Enablen Consulting, advising " +
-      "clients on systems and processes, building workflow automations, and deploying AI-powered " +
-      "solutions. I bring a strong IT ops background and a habit of fixing root causes rather than symptoms.",
+      "I'm a Technical Support Engineer at SecTeer, owning customer cases for the VulnDetect and " +
+      "PatchPro vulnerability and patch management solutions. I bring a strong IT ops and consulting " +
+      "background and a habit of fixing root causes rather than symptoms.",
     actions: [
       {
         href: "https://www.linkedin.com/in/louiehegelermeile",
@@ -195,11 +196,11 @@ export const SITE_DATA = {
     stats: [
       "Danish + English",
       "Driving License (B)",
-      "Customer Success Manager @ Enablen",
+      "Technical Support Engineer @ SecTeer",
       "PC Builder",
     ],
     wins: [
-      { value: "Day Job", label: "Customer Success Manager / Implementation Consultant at Enablen Consulting" },
+      { value: "Day Job", label: "Technical Support Engineer at SecTeer (VulnDetect + PatchPro)" },
       { value: "Background", label: "6+ yrs IT ops, systems admin, and implementation consulting" },
       { value: "Off Hours", label: "music, gaming, travel, and PC builds" },
     ],
@@ -208,8 +209,8 @@ export const SITE_DATA = {
     title: "About",
     paragraphs: [
       "Hey, I'm Louie. I'm an energetic, outgoing IT professional who enjoys new challenges and working with good people — with a habit of fixing what's broken and building what doesn't exist yet.",
-      "I'm currently a Customer Success Manager / Implementation Consultant at Enablen Consulting, advising clients on systems and processes, building workflow automations, and running projects end-to-end.",
-      "Before that, I spent five years at 21-5 A/S, latterly as Senior IT Operations Specialist, managing M365 and Azure and building internal tooling and automations that had no off-the-shelf solution. I care about root causes, not just quick fixes, and I like making clunky processes better.",
+      "I'm currently a Technical Support Engineer at SecTeer, owning customer cases for VulnDetect and PatchPro from first investigation through resolution or escalation, and working closely with development and product teams on the complex ones.",
+      "Before SecTeer, I was a Customer Success Manager / Implementation Consultant at Enablen Consulting, and before that I spent five years at 21-5 A/S, latterly as Senior IT Operations Specialist, managing M365 and Azure and building internal tooling and automations that had no off-the-shelf solution. I care about root causes, not just quick fixes, and I like making clunky processes better.",
       "I also spent a year and a half doing 2nd-line Apple support, handling escalations from clients and service providers worldwide. That gave me the client-facing composure and structured thinking that purely technical roles don't always develop.",
       "I work hands-on with AI too: building agents, prototyping internal tools with AI-assisted development, and getting practical results out of models rather than just talking about them.",
       "Outside work, I build PCs, write code for fun, and used to volunteer in r/techsupport — helping strangers debug real problems remotely.",
@@ -219,9 +220,16 @@ export const SITE_DATA = {
     title: "Experience",
     items: [
       {
+        logo: { type: "image", src: "/logos/secteer.png", alt: "SecTeer logo" },
+        title: "Technical Support Engineer",
+        meta: "SecTeer · Full-time | Oct 2026 - Present | Copenhagen, Denmark",
+        description:
+          "Own technical customer cases for SecTeer's VulnDetect and PatchPro vulnerability and patch management solutions, from first investigation through resolution or escalation. Level 1 and 2 support, troubleshooting across Windows, Microsoft and Intune environments, reproducing and escalating issues to development, customer onboarding and implementation, and improving the knowledge base and support processes.",
+      },
+      {
         logo: { type: "image", src: "/logos/enablen.jpg", alt: "Enablen Consulting logo" },
         title: "Customer Success Manager / Implementation Consultant",
-        meta: "Enablen Consulting · Full-time | May 2026 - Present | Copenhagen, Denmark",
+        meta: "Enablen Consulting · Full-time | May 2026 - Sep 2026 | Copenhagen, Denmark",
         description:
           "Advise clients on IT systems, tools, and processes. Design and implement workflow automations, deploy AI-powered solutions, and lead project and change management initiatives — including client onboarding, implementation workshops, and user adoption, plus workflow automation across Make and monday.com (certified) and PowerShell automation.",
       },
@@ -317,6 +325,8 @@ export const SITE_DATA = {
       "Microsoft 365 Administration",
       "Microsoft Exchange",
       "Microsoft Intune",
+      "Technical Customer Support",
+      "Vulnerability & Patch Management",
       "HW & SW Troubleshooting",
       "PowerShell Automation / Scripting",
       "Endpoint Lifecycle Management",
@@ -347,7 +357,7 @@ export const SITE_DATA = {
       {
         title: "What I Do",
         description:
-          "I advise clients on IT systems and processes, build workflow automations, and deploy AI-powered solutions — bringing a strong IT ops background to every engagement.",
+          "I own technical customer cases for vulnerability and patch management solutions, troubleshoot Windows, Microsoft and Intune environments, and help customers get onboarded and running.",
       },
       {
         title: "How I Work",
