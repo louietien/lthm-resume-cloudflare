@@ -74,7 +74,12 @@ const contactPhone = site.hero.contact_popup.phone;
               )}
               <h3>{item.title}</h3>
             </div>
-            <p class="meta">{item.meta}</p>
+            <div class="exp-meta">
+              <span class="exp-chip exp-chip-company">{item.meta.company}</span>
+              {item.meta.employment && <span class="exp-chip">{item.meta.employment}</span>}
+              <span class="exp-chip exp-chip-period">{item.meta.period}</span>
+              <span class="exp-chip">{item.meta.location}</span>
+            </div>
             <p>{item.description}</p>
           </div>
         ))}

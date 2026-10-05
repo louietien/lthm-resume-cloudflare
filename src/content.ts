@@ -210,7 +210,7 @@ export const SITE_DATA = {
     paragraphs: [
       "Hey, I'm Louie. I'm an energetic, outgoing IT professional who enjoys new challenges and working with good people — with a habit of fixing what's broken and building what doesn't exist yet.",
       "I'm currently a Technical Support Engineer at SecTeer, owning customer cases for VulnDetect and PatchPro from first investigation through resolution or escalation, and working closely with development and product teams on the complex ones.",
-      "Before SecTeer, I was a Customer Success Manager / Implementation Consultant at Enablen Consulting, and before that I spent five years at 21-5 A/S, latterly as Senior IT Operations Specialist, managing M365 and Azure and building internal tooling and automations that had no off-the-shelf solution. I care about root causes, not just quick fixes, and I like making clunky processes better.",
+      "Before SecTeer, I was a Customer Success Manager / Implementation Consultant at Enablen Consulting, advising clients on systems and processes, building workflow automations, and running implementations from kickoff to handover. Before that, I spent five years at 21-5 A/S, latterly as Senior IT Operations Specialist, managing M365 and Azure and building internal tooling and automations that had no off-the-shelf solution. I care about root causes, not just quick fixes, and I like making clunky processes better.",
       "I also spent a year and a half doing 2nd-line Apple support, handling escalations from clients and service providers worldwide. That gave me the client-facing composure and structured thinking that purely technical roles don't always develop.",
       "I work hands-on with AI too: building agents, prototyping internal tools with AI-assisted development, and getting practical results out of models rather than just talking about them.",
       "Outside work, I build PCs, write code for fun, and used to volunteer in r/techsupport — helping strangers debug real problems remotely.",
@@ -222,56 +222,96 @@ export const SITE_DATA = {
       {
         logo: { type: "image", src: "/logos/secteer.png", alt: "SecTeer logo" },
         title: "Technical Support Engineer",
-        meta: "SecTeer · Full-time | Oct 2026 - Present | Copenhagen, Denmark",
+        meta: {
+          company: "SecTeer",
+          employment: "Full-time",
+          period: "Oct 2026 - Present",
+          location: "Copenhagen, Denmark",
+        },
         description:
           "Own technical customer cases for SecTeer's VulnDetect and PatchPro vulnerability and patch management solutions, from first investigation through resolution or escalation. Level 1 and 2 support, troubleshooting across Windows, Microsoft and Intune environments, reproducing and escalating issues to development, customer onboarding and implementation, and improving the knowledge base and support processes.",
       },
       {
         logo: { type: "image", src: "/logos/enablen.jpg", alt: "Enablen Consulting logo" },
         title: "Customer Success Manager / Implementation Consultant",
-        meta: "Enablen Consulting · Full-time | May 2026 - Sep 2026 | Copenhagen, Denmark",
+        meta: {
+          company: "Enablen Consulting",
+          employment: "Full-time",
+          period: "May 2026 - Sep 2026",
+          location: "Copenhagen, Denmark",
+        },
         description:
-          "Advise clients on IT systems, tools, and processes. Design and implement workflow automations, deploy AI-powered solutions, and lead project and change management initiatives — including client onboarding, implementation workshops, and user adoption, plus workflow automation across Make and monday.com (certified) and PowerShell automation.",
+          "Advised clients on IT systems, tools, and processes. Designed and implemented workflow automations, rolled out AI-powered solutions and built internal AI competence, and led project and change management initiatives — including client onboarding, implementation workshops, and user adoption, plus workflow automation across Make and monday.com (certified) and PowerShell automation.",
       },
       {
         logo: { type: "image", src: "/logos/21-5.jpg", alt: "21-5 logo" },
         title: "Senior IT Operations Specialist",
-        meta: "21-5 A/S | Apr 2025 - Apr 2026 | Hørsholm, Denmark",
+        meta: {
+          company: "21-5 A/S",
+          employment: "Full-time",
+          period: "Apr 2025 - Apr 2026",
+          location: "Hørsholm, Denmark",
+        },
         description:
-          "Oversaw day-to-day IT operations, IT logistics, platform reliability, endpoint lifecycle management, and equipment procurement. Spotted weak or outdated workflows and drove continuous improvement with better, more practical solutions.",
+          "Oversaw day-to-day IT operations, IT logistics, platform reliability, endpoint lifecycle management, and equipment procurement. Administered Microsoft 365 and Azure (Exchange, Entra ID, Intune, DevOps, SharePoint), coordinated vendors, and automated processes with PowerShell. Spotted weak or outdated workflows and drove continuous improvement with better, more practical solutions.",
       },
       {
         logo: { type: "image", src: "/logos/21-5.jpg", alt: "21-5 logo" },
         title: "IT Operations Specialist",
-        meta: "21-5 A/S | Sep 2021 - Apr 2025 | Hørsholm, Denmark",
+        meta: {
+          company: "21-5 A/S",
+          employment: "Full-time",
+          period: "Sep 2021 - Apr 2025",
+          location: "Hørsholm, Denmark",
+        },
         description:
           "Managed Microsoft Exchange and Microsoft 365 administration, Azure DevOps workflows, and operational service delivery across modern workplace tooling.",
       },
       {
         logo: { type: "image", src: "/logos/webhelp.jpg", alt: "Webhelp Nordic logo" },
         title: "Senior Technical Advisor",
-        meta: "Webhelp Nordic | Aug 2020 - Aug 2021 | Copenhagen, Denmark",
+        meta: {
+          company: "Webhelp Nordic",
+          employment: "Full-time",
+          period: "Aug 2020 - Aug 2021",
+          location: "Copenhagen, Denmark",
+        },
         description:
           "Led second-line technical incident handling for Apple platforms, managed high-priority escalations, and coordinated complex repair workflows with authorised service providers worldwide.",
       },
       {
         logo: { type: "image", src: "/logos/webhelp.jpg", alt: "Webhelp Nordic logo" },
         title: "Technical Advisor",
-        meta: "Webhelp Nordic | Jan 2020 - Jul 2020 | Copenhagen, Denmark",
+        meta: {
+          company: "Webhelp Nordic",
+          employment: "Full-time",
+          period: "Jan 2020 - Jul 2020",
+          location: "Copenhagen, Denmark",
+        },
         description:
           "Provided technical troubleshooting across iOS and macOS platforms, building a strong foundation in diagnostics and structured escalation handling.",
       },
       {
         logo: { type: "image", src: "/logos/vinstue-90.jpg", alt: "Vinstue 90 logo" },
         title: "HR Business Partner",
-        meta: "Vinstue 90 | Aug 2015 - Present | Frederiksberg, Denmark",
+        meta: {
+          company: "Vinstue 90",
+          employment: "Part-time",
+          period: "Aug 2015 - Present",
+          location: "Frederiksberg, Denmark",
+        },
         description:
           "Manage payroll and tax reporting, coordinate shift schedules, and support onboarding and training of new staff.",
       },
       {
         logo: { type: "badge", text: "H" },
         title: "Storage & Sales Helper",
-        meta: "HARTUNG Men's Wear | Sep 2014 - Aug 2018 | Copenhagen, Denmark",
+        meta: {
+          company: "HARTUNG Men's Wear",
+          employment: "Part-time",
+          period: "Sep 2014 - Aug 2018",
+          location: "Copenhagen, Denmark",
+        },
         description:
           "Handled warehouse logistics, in-store sales support, and customer service.",
       },
@@ -314,6 +354,9 @@ export const SITE_DATA = {
   skills: {
     title: "Skills",
     items: [
+      "Customer Success",
+      "Customer Onboarding & User Adoption",
+      "Customer Service",
       "IT Operations",
       "AI Agent Design",
       "AI Prompt Engineering",
@@ -327,11 +370,17 @@ export const SITE_DATA = {
       "Microsoft Intune",
       "Technical Customer Support",
       "Vulnerability & Patch Management",
+      "Device Management (MDM)",
       "HW & SW Troubleshooting",
       "PowerShell Automation / Scripting",
       "Endpoint Lifecycle Management",
-      "Apple iOS / macOS",
-      "Azure Administration",
+      "Windows / macOS / iOS / Linux",
+      "Azure Administration (Entra ID, DevOps)",
+      "Docker",
+      "Node.js / Next.js / TypeScript",
+      "SQLite / PostgreSQL",
+      "Self-hosting",
+      "Microsoft Office",
       "Danish (Native)",
       "English (Bilingual)",
       "Driving License (B)",
