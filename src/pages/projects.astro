@@ -26,7 +26,7 @@ const data = PROJECTS_DATA;
     .back-link svg { flex-shrink: 0; }
 
     .projects-hero h1 {
-      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      font-size: clamp(1.7rem, 4vw, 2.3rem);
       font-weight: 700;
       margin: 0 0 0.4rem;
       letter-spacing: -0.02em;
@@ -57,7 +57,8 @@ const data = PROJECTS_DATA;
       color: var(--muted);
       font: inherit;
       font-size: 0.82rem;
-      padding: 0.28rem 0.72rem;
+      padding: 0.4rem 0.9rem;
+      min-height: 36px;
       cursor: pointer;
       transition: color 130ms ease, border-color 130ms ease, background-color 130ms ease;
     }
@@ -72,32 +73,30 @@ const data = PROJECTS_DATA;
       background: var(--a-dim);
       font-weight: 500;
     }
-    .filter-btn:focus-visible {
-      outline: none;
-      box-shadow: 0 0 0 3px var(--focus);
-    }
 
     /* ——— PROJECT GRID ————————————————————————————— */
 
     .project-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.7rem;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 0.9rem;
     }
 
     .project-card {
       border: 1px solid var(--line);
       border-radius: var(--radius-card);
-      padding: 1.1rem 1.1rem 1rem;
+      padding: 1.25rem 1.3rem 1.15rem;
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      transition: border-color 150ms ease, box-shadow 150ms ease;
+      transition: transform 220ms var(--ease), border-color 150ms ease, box-shadow 220ms var(--ease);
       background: var(--surface);
+      box-shadow: var(--shadow);
     }
     .project-card:hover {
+      transform: translateY(-2px);
       border-color: var(--a-line);
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow-lift);
     }
 
     .project-card[data-hidden="true"] {
@@ -145,11 +144,12 @@ const data = PROJECTS_DATA;
     }
 
     .card-link {
-      font-size: 0.78rem;
+      font-size: 0.82rem;
+      font-weight: 500;
       color: var(--accent);
       text-decoration: none;
     }
-    .card-link:hover { text-decoration: underline; }
+    .card-link:hover { text-decoration: underline; text-underline-offset: 3px; }
 
     .card-footer {
       display: flex;
@@ -175,8 +175,8 @@ const data = PROJECTS_DATA;
     }
 
     .card-category {
-      font-size: 0.72rem;
-      color: var(--faint);
+      font-size: 0.74rem;
+      color: var(--muted);
       font-weight: 500;
       white-space: nowrap;
       flex-shrink: 0;
@@ -197,8 +197,8 @@ const data = PROJECTS_DATA;
     /* ——— COUNT ——————————————————————————————————— */
 
     .project-count {
-      font-size: 0.8rem;
-      color: var(--faint);
+      font-size: 0.82rem;
+      color: var(--muted);
       margin-bottom: 0.9rem;
     }
 
