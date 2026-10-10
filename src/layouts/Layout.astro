@@ -3,55 +3,102 @@ interface Props {
   title: string;
 }
 const { title } = Astro.props;
+const home = Astro.url.pathname === "/";
 ---
+
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{title}</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
-  <script is:inline>
-    (function () {
-      var saved = localStorage.getItem("theme");
-      document.documentElement.setAttribute("data-theme", (saved === "dark" || saved === "light") ? saved : "light");
-    })();
-  </script>
-</head>
-<body>
-  <div class="top-right-controls">
-    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">Dark Mode</button>
-  </div>
-  <slot />
-  <script is:inline>
-    (function () {
-      var root = document.documentElement;
-      var btn = document.getElementById("theme-toggle");
-
-      function currentTheme() {
-        var explicit = root.getAttribute("data-theme");
-        if (explicit) return explicit;
-        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Louie Hegeler-Meile — technical support, IT operations, and practical tools. Based in Copenhagen."
+    />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script is:inline>
+      try {
+        const theme = localStorage.getItem("theme");
+        document.documentElement.dataset.theme =
+          theme === "dark" ? "dark" : "light";
+      } catch {
+        document.documentElement.dataset.theme = "light";
       }
-
-      function renderLabel() {
-        var isDark = currentTheme() === "dark";
-        btn.textContent = isDark ? "Light Mode" : "Dark Mode";
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <header class="site-header">
+      <nav class="site-nav wrap" aria-label="Main navigation">
+        <a class="wordmark" href="/" aria-label="Louie Hegeler-Meile home">
+          louie<span class="wordmark-dot">.</span>
+        </a>
+        <div class="nav-links">
+          <a href={home ? "#about" : "/#about"}>The person</a>
+          <a href={home ? "#experience" : "/#experience"}>Experience</a>
+          <a href="/projects" aria-current={!home ? "page" : undefined}>
+            Projects
+          </a>
+        </div>
+        <div class="nav-actions">
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch to dark theme"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M20.5 14.2A8.6 8.6 0 0 1 9.8 3.5a8.6 8.6 0 1 0 10.7 10.7Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+            </svg>
+          </button>
+          <a class="nav-contact" href={home ? "#contact" : "/#contact"}>
+            Let’s talk <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <slot />
+    <script>
+      import "../scripts/motion";
+      const root = document.documentElement;
+      const button = document.querySelector<HTMLButtonElement>("#theme-toggle");
+      function label() {
+        const dark = root.dataset.theme === "dark";
+        button?.setAttribute(
+          "aria-label",
+          `Switch to ${dark ? "light" : "dark"} theme`,
+        );
+        button?.setAttribute("aria-pressed", String(dark));
       }
-
-      btn.addEventListener("click", function () {
-        var next = currentTheme() === "dark" ? "light" : "dark";
-        root.setAttribute("data-theme", next);
-        localStorage.setItem("theme", next);
-        renderLabel();
+      button?.addEventListener("click", () => {
+        root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+        try {
+          localStorage.setItem("theme", root.dataset.theme);
+        } catch {
+          /* Theme still works without storage. */
+        }
+        label();
       });
-
-      renderLabel();
-    })();
-  </script>
-</body>
+      label();
+    </script>
+  </body>
 </html>

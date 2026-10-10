@@ -1,295 +1,132 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { PROJECTS_DATA } from '../content';
-
+import Layout from "../layouts/Layout.astro";
+import Contact from "../components/Contact.astro";
+import { PROJECTS_DATA } from "../content";
 const data = PROJECTS_DATA;
 ---
+
 <Layout title={data.page_title}>
-  <style is:global>
-    /* ——— PROJECTS PAGE EXTRAS ————————————————————— */
-
-    .projects-hero {
-      padding: 3rem 0 2rem;
-    }
-
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.83rem;
-      color: var(--muted);
-      text-decoration: none;
-      margin-bottom: 1.6rem;
-      transition: color 130ms ease;
-    }
-    .back-link:hover { color: var(--accent); }
-    .back-link svg { flex-shrink: 0; }
-
-    .projects-hero h1 {
-      font-size: clamp(1.5rem, 3.5vw, 2rem);
-      font-weight: 700;
-      margin: 0 0 0.4rem;
-      letter-spacing: -0.02em;
-      white-space: normal;
-    }
-
-    .projects-hero p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.93rem;
-    }
-
-    /* ——— FILTER BAR —————————————————————————————— */
-
-    .filter-bar {
-      display: flex;
-      gap: 0.35rem;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .filter-btn {
-      background: transparent;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-control);
-      color: var(--muted);
-      font: inherit;
-      font-size: 0.82rem;
-      padding: 0.28rem 0.72rem;
-      cursor: pointer;
-      transition: color 130ms ease, border-color 130ms ease, background-color 130ms ease;
-    }
-    .filter-btn:hover {
-      color: var(--ink);
-      border-color: var(--a-line);
-      background: var(--a-dim);
-    }
-    .filter-btn.is-active {
-      color: var(--accent);
-      border-color: var(--a-line);
-      background: var(--a-dim);
-      font-weight: 500;
-    }
-    .filter-btn:focus-visible {
-      outline: none;
-      box-shadow: 0 0 0 3px var(--focus);
-    }
-
-    /* ——— PROJECT GRID ————————————————————————————— */
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.7rem;
-    }
-
-    .project-card {
-      border: 1px solid var(--line);
-      border-radius: var(--radius-card);
-      padding: 1.1rem 1.1rem 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      transition: border-color 150ms ease, box-shadow 150ms ease;
-      background: var(--surface);
-    }
-    .project-card:hover {
-      border-color: var(--a-line);
-      box-shadow: var(--shadow);
-    }
-
-    .project-card[data-hidden="true"] {
-      display: none;
-    }
-
-    .card-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 0.5rem;
-    }
-
-    .card-name {
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: var(--ink);
-      margin: 0;
-      line-height: 1.3;
-    }
-
-    .card-version {
-      font-size: 0.72rem;
-      color: var(--muted);
-      border: 1px solid var(--pill-ln);
-      background: var(--pill-bg);
-      border-radius: var(--radius-chip);
-      padding: 0.12rem 0.48rem;
-      white-space: nowrap;
-      flex-shrink: 0;
-      margin-top: 0.05rem;
-    }
-
-    .card-desc {
-      margin: 0;
-      font-size: 0.85rem;
-      color: var(--muted);
-      line-height: 1.55;
-      flex: 1;
-    }
-
-    .card-links {
-      display: flex;
-      gap: 0.7rem;
-    }
-
-    .card-link {
-      font-size: 0.78rem;
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .card-link:hover { text-decoration: underline; }
-
-    .card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.5rem;
-      margin-top: 0.15rem;
-    }
-
-    .card-stack {
-      display: flex;
-      gap: 0.3rem;
-      flex-wrap: wrap;
-    }
-
-    .stack-tag {
-      font-size: 0.74rem;
-      border: 1px solid var(--tag-ln);
-      background: var(--tag-bg);
-      border-radius: var(--radius-chip);
-      padding: 0.16rem 0.45rem;
-      color: var(--ink);
-    }
-
-    .card-category {
-      font-size: 0.72rem;
-      color: var(--faint);
-      font-weight: 500;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    /* ——— EMPTY STATE ————————————————————————————— */
-
-    .empty-state {
-      display: none;
-      text-align: center;
-      padding: 3rem 0;
-      color: var(--faint);
-      font-size: 0.9rem;
-      grid-column: 1 / -1;
-    }
-    .empty-state.is-visible { display: block; }
-
-    /* ——— COUNT ——————————————————————————————————— */
-
-    .project-count {
-      font-size: 0.8rem;
-      color: var(--faint);
-      margin-bottom: 0.9rem;
-    }
-
-    /* ——— RESPONSIVE ——————————————————————————————— */
-
-    @media (max-width: 560px) {
-      .project-grid { grid-template-columns: 1fr; }
-      .filter-bar { gap: 0.3rem; }
-    }
-  </style>
-
-  <main class="wrap">
-    <div class="projects-hero">
+  <main id="main-content">
+    <header class="projects-hero wrap">
       <a href="/" class="back-link">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-          <path d="M9 11L5 7l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        Back to portfolio
+        <span aria-hidden="true">←</span> Back to the portfolio
       </a>
-      <p class="eyebrow">Side Projects &amp; Internal Tooling</p>
-      <h1>Things I've built</h1>
-      <p>A running list of projects — internal tools, automations, and web apps.</p>
-    </div>
-
-    <div class="filter-bar" id="filter-bar">
-      {data.filters.map((f, i) => (
-        <button class={`filter-btn${i === 0 ? ' is-active' : ''}`} data-filter={f}>{f}</button>
-      ))}
-    </div>
-
-    <p class="project-count" id="project-count"></p>
-
-    <div class="project-grid" id="project-grid">
-      {data.projects.map(item => (
-        <div class="project-card" data-category={item.category}>
-          <div class="card-top">
-            <h3 class="card-name">{item.name}</h3>
-            {item.version && <span class="card-version">v{item.version}</span>}
-          </div>
-          <p class="card-desc">{item.description}</p>
-          {(item.demo || item.repo) && (
-            <div class="card-links">
-              {item.demo && <a class="card-link" href={item.demo} target="_blank" rel="noreferrer">Live demo ↗</a>}
-              {item.repo && <a class="card-link" href={item.repo} target="_blank" rel="noreferrer">Source ↗</a>}
-            </div>
-          )}
-          <div class="card-footer">
-            <div class="card-stack">
-              {item.stack.map(tag => <span class="stack-tag">{tag}</span>)}
-            </div>
-            <span class="card-category">{item.category}</span>
-          </div>
+      <h1>
+        Useful by design.
+        <br />
+        <span>Built by curiosity.</span>
+      </h1>
+      <p>
+        A collection of internal tools, automations, and web apps. Built to make
+        everyday work a little easier.
+      </p>
+    </header>
+    <section class="projects-catalog wrap" aria-label="Project collection">
+      <div class="catalog-toolbar">
+        <div
+          class="filter-bar"
+          id="filter-bar"
+          role="group"
+          aria-label="Filter projects by technology"
+        >
+          {data.filters.map((filter, i) => (
+            <button
+              type="button"
+              class:list={["filter-btn", { "is-active": i === 0 }]}
+              data-filter={filter}
+              aria-pressed={i === 0 ? "true" : "false"}
+            >
+              {filter}
+            </button>
+          ))}
         </div>
-      ))}
-      <p class="empty-state" id="empty-state">No projects in this category.</p>
-    </div>
+        <p
+          class="project-count"
+          id="project-count"
+          role="status"
+          aria-live="polite"
+        >
+          {data.projects.length} projects
+        </p>
+      </div>
+      <div class="project-grid">
+        {data.projects.map((item) => (
+          <article class="project-card" data-category={item.category}>
+            <div class="card-top">
+              <h2 class="card-name">{item.name}</h2>
+              {item.version && (
+                <span class="card-version">v{item.version}</span>
+              )}
+            </div>
+            <p class="card-desc">{item.description}</p>
+            {(item.demo || item.repo) && (
+              <div class="card-links">
+                {item.demo && (
+                  <a
+                    class="card-link"
+                    href={item.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live demo ↗
+                  </a>
+                )}
+                {item.repo && (
+                  <a
+                    class="card-link"
+                    href={item.repo}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Source ↗
+                  </a>
+                )}
+              </div>
+            )}
+            <div class="card-footer">
+              <div class="card-stack">
+                {item.stack.map((tag) => (
+                  <span class="stack-tag">{tag}</span>
+                ))}
+              </div>
+              <span class="card-category">{item.category}</span>
+            </div>
+          </article>
+        ))}
+        <p class="empty-state" id="empty-state">
+          No projects in this category.
+        </p>
+      </div>
+    </section>
+    <Contact />
   </main>
-
-  <script is:inline>
-    (function () {
-      var filterBar = document.getElementById("filter-bar");
-      var cards = Array.from(document.querySelectorAll(".project-card"));
-      var countEl = document.getElementById("project-count");
-      var emptyState = document.getElementById("empty-state");
-
-      function updateCount(visible) {
-        countEl.textContent = visible + " project" + (visible === 1 ? "" : "s");
-      }
-
-      function applyFilter(filter) {
-        var visible = 0;
-        cards.forEach(function (card) {
-          var show = filter === "All" || card.dataset.category === filter;
-          card.dataset.hidden = show ? "false" : "true";
-          if (show) visible++;
-        });
-        emptyState.classList.toggle("is-visible", visible === 0);
-        updateCount(visible);
-      }
-
-      filterBar.addEventListener("click", function (e) {
-        var target = e.target.closest(".filter-btn");
-        if (!target) return;
-        filterBar.querySelectorAll(".filter-btn").forEach(function (b) {
-          b.classList.remove("is-active");
-        });
-        target.classList.add("is-active");
-        applyFilter(target.dataset.filter);
+  <script>
+    const bar = document.querySelector("#filter-bar");
+    const cards = [...document.querySelectorAll<HTMLElement>(".project-card")];
+    bar?.addEventListener("click", (event) => {
+      const target = (event.target as Element).closest<HTMLButtonElement>(
+        ".filter-btn",
+      );
+      if (!target) return;
+      bar.querySelectorAll(".filter-btn").forEach((button) => {
+        const active = button === target;
+        button.classList.toggle("is-active", active);
+        button.setAttribute("aria-pressed", String(active));
       });
-
-      applyFilter("All");
-    })();
+      let visible = 0;
+      cards.forEach((card) => {
+        const show =
+          target.dataset.filter === "All" ||
+          card.dataset.category === target.dataset.filter;
+        card.hidden = !show;
+        if (show) visible++;
+      });
+      const count = document.querySelector("#project-count");
+      if (count)
+        count.textContent = `${visible} project${visible === 1 ? "" : "s"}`;
+      document
+        .querySelector("#empty-state")
+        ?.classList.toggle("is-visible", visible === 0);
+    });
   </script>
 </Layout>

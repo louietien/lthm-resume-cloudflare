@@ -1,0 +1,37 @@
+---
+import { SITE_DATA } from "../content";
+---
+
+<footer class="contact-section" id="contact">
+  <div class="wrap">
+    <div class="contact-top">
+      <p>Good conversations start here.</p>
+      <span>Copenhagen, Denmark</span>
+    </div>
+    <h2>
+      Let’s make
+      <br />
+      <span>things work.</span>
+    </h2>
+    <div class="contact-bottom">
+      <div class="hero-actions">
+        {SITE_DATA.contact.actions.map((action) => (
+          <a
+            class={`btn${action.ghost ? " btn-ghost" : ""}`}
+            href={action.href}
+            target={action.external ? "_blank" : undefined}
+            rel={action.external ? "noreferrer" : undefined}
+          >
+            {action.label} <span aria-hidden="true">↗</span>
+          </a>
+        ))}
+      </div>
+      <p>{SITE_DATA.contact.description}</p>
+    </div>
+    <div class="footer-line">
+      <a href="/">Louie Hegeler-Meile</a>
+      <span>Curiosity, put to work.</span>
+      <a href="#main-content">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
